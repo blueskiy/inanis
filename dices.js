@@ -13,7 +13,7 @@ const rollDice = (diceSides) => {
 }
 
 export const rollResult = (message) => {
-  console.log(`${message.member.nickname} rolled a`, dice);
+  console.log(`${message.member.nickname} rolls`, message.content);
 
   const dice = message.content;
   const rolledDices = dice.split('$')[1].includes('+') ? dice.split('+')[0].replace('$', '') : dice.split('$')[1]

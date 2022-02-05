@@ -32,14 +32,19 @@ client.on('messageCreate', message => {
     return
   }
 
-  if (message.content === 'Inänis tell me a riddle') {
+  if (message.content.includes('Heimiik')) {
+    message.reply('de onde você conhece o <@!934804769044836362>?');
+    return
+  }
+
+  if (message.content === 'Lënore tell me a riddle') {
     const enigma = '>>> Dela tudo nasce\nMas sem um corpo que a abrace\nTodos a possuem\nMas nem todos usufruem\nDá à luz dois irmãos\nReal e Irreal\nSemelhança semi-igual';
 
     message.reply(enigma);
     return
   }
 
-  if (message.content.includes('Inänis')) {
+  if (message.content.includes('Lënore')) {
     message.reply(`You are not worthy to pronounce my name **${message.member.nickname}**.`);
     return
   }
