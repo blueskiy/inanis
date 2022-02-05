@@ -25,6 +25,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on('messageCreate', message => {
+  const msg = message.content.toLowerCase();
   const rollCommand = message.content.match(/^\$\d?D|^\$\d?d\d/);
 
   if (rollCommand) {
@@ -49,8 +50,8 @@ client.on('messageCreate', message => {
     return
   }
 
-  if (message.content.includes('Lança') || message.content.includes('Lansa')  || message.content.includes('Lamsa')) {
-    message.reply(`https://www.youtube.com/watch?v=KSc9ToQTWzc`);
+  if (msg.includes('lança') || msg.includes('lansa') || msg.includes('lamsa')) {
+    message.reply(`>>> **... perfume?**\nhttps://www.youtube.com/watch?v=KSc9ToQTWzc`);
     return
   }
 });
