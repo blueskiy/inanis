@@ -48,6 +48,11 @@ client.on('messageCreate', message => {
     message.reply(`You are not worthy to pronounce my name **${message.member.nickname}**.`);
     return
   }
+
+  if (message.content.includes('Lança') || message.content.includes('Lansa')  || message.content.includes('Lamsa')) {
+    message.reply(`https://www.youtube.com/watch?v=KSc9ToQTWzc`);
+    return
+  }
 });
 
 client.login(token);
